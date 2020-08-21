@@ -33,3 +33,17 @@ url => Path
 view => logic
 model => DB
 templates => Frontend
+
+
+
+
+relations in django :
+        - One to many  [author - posts] Forginkey
+        - Many to many [user - groups] Many to many
+        - One to one   [user - profile] One to one
+
+
+
+
+static files : [frontend] image, css, javascript
+media files : [upload] images

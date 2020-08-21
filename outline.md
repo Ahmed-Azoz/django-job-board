@@ -4,6 +4,7 @@ Job :
     -job type
     -description
     -published at
+    -vacancy
     -salary
     -category
     -experience
