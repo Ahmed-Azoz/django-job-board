@@ -129,7 +129,7 @@
                                             <img src="" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>{{ job }}</h4></a>
+                                            <a href=""><h4>{{ job }}</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
                                                     <p> <i class="fa fa-map-marker"></i> California, USA</p>
@@ -146,8 +146,7 @@
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
-                                            <p>{{ job.published_at|date:'d M L' }}</p>
+                                            <p>Date line: {{ job.published_at|date:'d M Y' }}</p>
 
                                         </div>
                                     </div>
