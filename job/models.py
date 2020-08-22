@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 JOB_TYPE = (
     ('Full Time', 'Full Time'),
     ('Part Time', 'Part Time'),
@@ -21,8 +22,12 @@ class job(models.Model):
     experience = models.IntegerField(default=1)
     category = models.ForeignKey('category', on_delete=models.CASCADE) #ben double '' 3shan l category class gia b3dha w l cascde 3shan law ms7t l category yms7 kol l jobs l gwaha
     image = models.ImageField(upload_to = image_upload)
-
+    slug = models.SlugField(blank=True, null=True)
     
+    def save(self, *args, **kwargs):
+       self.slug = slugify(self.title)
+       super(job, self).save(*args, **kwargs) # Call the real save() method
+
     def __str__(self):
         return self.title
 
@@ -32,3 +37,10 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Apply(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    website = models.FileField(upload_to='apply/')
+    cover_letter = models.CharField(max_length=500)

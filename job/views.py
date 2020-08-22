@@ -15,13 +15,13 @@ def job_list(request):
     context = { 'jobs' : page_obj}
     return render(request, 'job/job_list.html', context)
 
-def job_list_num(request):
-    job_list = job.objects.all()
+# def job_list_num(request):
+#     job_list = job.objects.all()
 
-    context = { 'jobs' : page_obj}
-    return count(job_list)
+#     # context = { 'List' : job_list}
+#     return 'count(job_list)'
 
-def job_detail(request, id):
-    job_detail = job.objects.get(id=id)
+def job_detail(request, slug):
+    job_detail = job.objects.get(slug=slug)
     context = {'job': job_detail}
     return render(request, 'job/job_detail.html',context)
