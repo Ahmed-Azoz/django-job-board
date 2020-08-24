@@ -40,7 +40,13 @@ class Category(models.Model):
 
 
 class Apply(models.Model):
+    job = models.ForeignKey(job, related_name='apply_ob', on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
-    website = models.FileField(upload_to='apply/')
+    cv = models.FileField(upload_to='apply/')
+    website = models.URLField()
     cover_letter = models.CharField(max_length=500)
+    cearted_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
