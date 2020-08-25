@@ -1,7 +1,7 @@
-from django import form
+from django import forms
 from .models import Apply
 
-class Applyform(ModelForm):
+class Applyform(forms.ModelForm):
     class Meta:
         model = Apply
         fields = ['name', 'email', 'website', 'cover_letter', 'cearted_at']

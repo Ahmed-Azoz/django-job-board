@@ -23,10 +23,10 @@ def job_list(request):
 
 def job_detail(request, slug):
     job_detail = job.objects.get(slug=slug)
-    if request.method == 'POST':
+    if request.method == 'post':
         pass
     else:
-        form = Applyform()
+        form = Apply()
 
 
 
