@@ -46,7 +46,7 @@ class Apply(models.Model):
     cv = models.FileField(upload_to='apply/')
     website = models.URLField()
     cover_letter = models.CharField(max_length=500)
-    cearted_at = models.DateTimeField(auto_now=True)
+    cearted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
