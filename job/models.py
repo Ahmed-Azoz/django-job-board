@@ -45,7 +45,7 @@ class Apply(models.Model):
     email = models.EmailField(max_length=100)
     cv = models.FileField(upload_to='apply/')
     website = models.URLField()
-    cover_letter = models.CharField(max_length=500)
+    cover_letter = models.TextField(max_length=500)
     cearted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
