@@ -76,15 +76,26 @@
                     </div>
                     <div class="apply_job_form white-bg">
                         <h4>Apply for the job</h4>
-                         <form action="#" method="POST">
                             <form action="/url/to/submit/" method="post" class="form">
                                 {% csrf_token %}
                                 {% bootstrap_form form %}
+                                <form class="md-form">
+                                    <div class="file-field">
+                                      <div class="btn btn-primary btn-sm float-left">
+                                        <span>Choose file</span>
+                                        <input type="file">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload your file">
+                                      </div>
+                                    </div>
+                                  </form>
+
                                 {% buttons %}
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                <button  class="boxed-btn3 w-100" type="submit">Submit</button>
                                 {% endbuttons %}
                             </form>
-                        </form> 
+
                     </div>
                 </div>
                 <div class="col-lg-4">
