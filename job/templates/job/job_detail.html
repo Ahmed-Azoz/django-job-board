@@ -76,7 +76,7 @@
                     </div>
                     <div class="apply_job_form white-bg">
                         <h4>Apply for the job</h4>
-                            <form action="/url/to/submit/" method="post" class="form">
+                            <form method="POST" class="form" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 {% bootstrap_form form %}
                                 
