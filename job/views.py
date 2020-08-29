@@ -38,3 +38,9 @@ def job_detail(request, slug):
 
     context = {'job': job_detail, 'form':form }
     return render(request, 'job/job_detail.html',context)
+
+
+
+def add_job(request):
+
+    return render(request, 'job/add_job.html' , {})
