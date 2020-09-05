@@ -23,6 +23,7 @@ from job import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.job_list),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('jobs/', include('job.urls', namespace='jobs')),
 ]
 
