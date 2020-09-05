@@ -18,13 +18,16 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from job import views
+from accounts import views
 
 
 urlpatterns = [
+    path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('', views.job_list),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('jobs/', include('job.urls', namespace='jobs')),
+    # path('jobs/', include('job.urls', namespace='jobs')),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
