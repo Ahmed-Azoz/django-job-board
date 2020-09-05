@@ -3,7 +3,7 @@ from .import views
 app_name='job' #lazem tktp asm al app
 
 urlpatterns = [
-    path('', views.job_list, name='List'),
+    path('', views.job_list, name='job_List'),
     path('add', views.add_job, name='add_job'),
     path('<str:slug>', views.job_detail, name='job_detail'),
 ]
