@@ -23,7 +23,8 @@ def signup(request):
 
 
 def profile(request):
-    profile = Profile.object.get(user=request.user)
+    print('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')
+    profile = Profile.objects.get(user=request.user)
     return render(request, 'accounts/profile.html', {'profile': profile})
 
 def profile_edit(request):
