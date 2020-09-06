@@ -26,9 +26,7 @@ def job_detail(request, slug):
     job_detail = job.objects.get(slug=slug)
     if request.method == 'POST':
         form = Applyform(request.POST, request.FILES)
-        print('done')
         if form.is_valid():
-            print('done')
             myform = form.save(commit=False)
             myform.job = job_detail
             form.save()

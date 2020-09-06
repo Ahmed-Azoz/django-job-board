@@ -34,7 +34,9 @@ view => logic
 model => DB
 templates => Frontend
 
-
+migrations :
+        python manage.py makemigrations
+        python manage.py migrate
 
 
 relations in django :
