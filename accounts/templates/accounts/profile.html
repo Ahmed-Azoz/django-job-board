@@ -24,13 +24,17 @@
                         <div class="summery_header">
                             <h3>Profile Summery</h3>
                         </div>
-                        <div class="job_content">
+                        <div class="col-lg-2 job_" style = "position:relative; left:540px; top:2px">
+
+                        <img src={{profile.image.url}} width="150px" height="150px">
+                        </div>
+                        <div class="col-lg-6 job_content" style = "position:relative; left:0px; top:-180px">
                             <ul>
                                 <li>Name: <span>{{ profile }}</span></li>
                                 <li>Email: <span> {{profile.user.email}}</span></li>
                                 <li>Phone: <span>{{profile.phone_number}}</span></li>
                                 <li>Address: <span>{{profile.City}}</span></li>
-                                <li><img src={{profile.image}}  </li>
+
                             </ul>
                         </div>
                     </div>
