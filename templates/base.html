@@ -63,9 +63,17 @@
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="Appointment">
                                     {% if request.user.is_authenticated %}
-                                    <div class="phone_num d-none d-xl-block">
-                                        <a href="{% url 'login' %}">Log in</a>
-                                    </div>
+                                        <div class="phone_num d-none d-xl-block">
+                                           <a href="{% url 'accounts:profile' %}">Profile</a>
+                                        </div>
+                                        <div class="phone_num d-none d-xl-block">
+                                            <a href="{% url 'logout' %}">LogOut</a>
+                                         </div>
+                                    {% else %}
+                                         <div class="phone_num d-none d-xl-block">
+                                            <a href="{% url 'login' %}">Log in</a>
+                                         </div>
+                                    {% endif %}
                                     <div class="d-none d-lg-block">
                                         <a class="boxed-btn3" href="{% url 'jobs:add_job' %}">Post a Job</a>
                                     </div>
@@ -181,8 +189,11 @@
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                 </div>
@@ -226,21 +237,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{% static 'js/main.js' %}"></script>
 
 
-	<script>
-        $( function() {
-            $( "#slider-range" ).slider({
+    <script>
+        $(function () {
+            $("#slider-range").slider({
                 range: true,
                 min: 0,
                 max: 24600,
-                values: [ 750, 24600 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] +"/ Year" );
+                values: [750, 24600],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1] + "/ Year");
                 }
             });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                " - $" + $( "#slider-range" ).slider( "values", 1 ) + "/ Year");
-        } );
-        </script>
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1) + "/ Year");
+        });
+    </script>
 </body>
 
 </html>
