@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'contact',
     'bootstrap4',
     'django_filters',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,10 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / "media"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'iamazoz601@gmail.com' 
+EMAIL_HOST_PASSWORD = 'edivnotuveuecaiu'
+EMAIL_USE_TLS = True
+EMAIL_PORT = '587'
