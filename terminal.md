@@ -45,6 +45,7 @@ relations in django :
         - One to one   [user - profile] One to one
 
 
+- install bootstrap4: python -m pip install bootstrap4
 
 
 static files : [frontend] image, css, javascript
@@ -66,3 +67,15 @@ media files : [upload] images
 -- Viewsets
         - api [model + url] [CRUD]
         - hard customiz
+
+
+-------------------------------------------------------------------------
+deploay in pythonanywhere
+1- git clone https://github.com/Ahmed-Azoz/django-job-board.git
+2- cd django-job-board
+3- mkvirtualenv --python=/usr/bin/python3.8 jobbordvenv
+4- workon jobbordvenv
+5- cd .virtualenvs/
+6- pip install django pillow
+7- (jobbordvenv) 06:19 ~ $ cd django-job-board
+8- pwd
