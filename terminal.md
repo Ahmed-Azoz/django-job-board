@@ -49,3 +49,20 @@ relations in django :
 
 static files : [frontend] image, css, javascript
 media files : [upload] images
+
+
+
+
+
+-- Function Based View
+        - simple
+        - customiz
+        - complex
+
+-- Class Based View
+        - fast development
+        - not complex
+
+-- Viewsets
+        - api [model + url] [CRUD]
+        - hard customiz
